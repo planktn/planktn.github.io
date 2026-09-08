@@ -4,13 +4,12 @@ import path from "node:path";
 
 export default defineConfig({
   plugins: [react()],
-  base: "/planktn.github.io/",
+  base: "/",
   resolve: {
     alias: {
-      "@": path.resolve(process.cwd(), "client/src"),
-      "@shared": path.resolve(process.cwd(), "shared"),
-    },
+      "@": path.resolve(process.cwd(), "client/src")
+    }
   },
   root: path.resolve(process.cwd(), "client"),
-  build: { outDir: path.resolve(process.cwd(), "dist"), emptyOutDir: true },
+  build: { outDir: path.resolve(process.cwd(), "dist"), emptyOutDir: true }
 });
